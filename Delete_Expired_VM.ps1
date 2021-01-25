@@ -37,9 +37,9 @@ try
 	" -ForegroundColor Yellow
 
 	$vCenter= Read-Host -Prompt "Please enter the Vcenter you want to connect `n" 
-    $vCenterUser= Read-Host -Prompt "Enter user name `n"
-    $vCenterUserPassword= Read-Host -Prompt "Password `n" -assecurestring
-    $credential = New-Object System.Management.Automation.PSCredential($vCenterUser,$vCenterUserPassword)
+    	$vCenterUser= Read-Host -Prompt "Enter user name `n"
+   	$vCenterUserPassword= Read-Host -Prompt "Password `n" -assecurestring
+    	$credential = New-Object System.Management.Automation.PSCredential($vCenterUser,$vCenterUserPassword)
 
 	Connect-VIServer -Server $vCenter -Credential $credential -EA Stop
 
